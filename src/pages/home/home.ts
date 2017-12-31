@@ -1,9 +1,10 @@
 import { NavController } from 'ionic-angular';
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation';
-
+import { IonicPage } from 'ionic-angular';
 
 declare var google;
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -12,6 +13,11 @@ export class HomePage {
   
   @ViewChild('map') mapElement: ElementRef;
   map: any;  
+
+  start = 'Rua 5, il';
+  end = 'Rua 5, il';
+  directionsService = new google.maps.DirectionsService;
+  directionsDisplay = new google.maps.DirectionsRenderer;
 
 
 
