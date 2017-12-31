@@ -45,7 +45,7 @@ addMarker(){
     position: this.map.getCenter()
   });
 
-  let content = "<h4>Infromation! </h4>";
+  let content = "<h4>Local atual! </h4>";
 
   this.addInfoWindow(marker, content);
 }
