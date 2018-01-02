@@ -33,8 +33,55 @@
 
   <link href="build/main.css" rel="stylesheet">
 
+  <style>
+  #map{
+    height: 400px;
+    width: 100%;
+  }
+    </style>
+
 </head>
 <body>
+  <h1>My Google Map</h1>
+  <div id="map"></div>
+  <script>
+    function initMap(){
+      //Map options
+      var  options = {
+        zoom: 8,
+        center: latLng
+
+      }
+      //New map
+
+      var map = new google.maps.Map(document.getElementById('map'), options);
+    
+    /*
+      //Add Marker
+    var marker= new google.maps.Marker({
+      position: {position: latitude, longitud},
+      map:map,
+      icon:' https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+        //var beachMarker = new google.maps.Marker({
+         // position: {lat: -33.890, lng: 151.274},
+    });
+
+    var infoWindow = new google.maps.infoWindow({
+content: '<h1>Lynn MA</h1>'
+
+    });
+
+    marker.addListener('click', function(){
+      infoWindow.open(map, marker);
+
+    });
+
+    */
+
+    
+  }
+  </script>
+
 
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
